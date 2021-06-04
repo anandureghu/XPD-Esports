@@ -1,0 +1,48 @@
+.dropdown{
+    background-color: #262626;
+    color: white;
+}
+
+.dropdown{
+    color: #ffffff;
+}
+
+
+.section-title span{
+    color: #263238;
+}
+
+.box-head{
+    color: white;
+}
+
+.contact .info-box {
+    color: #444444;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(18, 18, 18, .6);
+    padding: 20px 0 30px 0;
+  }
+
+  .contact .php-email-form {
+    box-shadow: 0 0 30px rgba(18, 18, 18, .6);
+    padding: 30px;
+  }
+
+  .members{
+      background-color: whitesmoke;
+      clip-path: circle();
+      margin: 20px 0px;
+  }
+
+  .person h6{
+      color: #A9A9A9;
+      margin:0px 10px;
+  }
+
+
+  .lineup span{
+    color: #eee;
+}
+.lineup h2{
+    color: #263238;
+}

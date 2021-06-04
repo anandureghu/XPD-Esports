@@ -1,0 +1,599 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block head %}
+<title>XPD-XGEN Painless Dragons</title>
+<link href="{% static 'assets/css/custom.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top ">
+    <div class="container d-flex">
+      <div class="contact-info mr-auto">
+        <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">contact@xpd.com</a>
+      </div>
+      <div class="social-links">
+        <a href="#" class="instagram"><i class="icofont-instagram"></i> Instagram</a>
+        <a href="#" class="twitter"><i class="icofont-youtube"></i> YouTube</a>
+        <a href="#" class="facebook"><i class="icofont-facebook"></i> Facebook</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+        <a href="#"><img src="{% static 'assets/img/logo.png' %}" alt="XPD" style="width: 50px; height: 50px;">
+      <h1 class="logo mr-auto">XPD</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="home.html">Home</a></li>
+          <li class="drop-down"><a href="#services">Announcements</a>
+            <ul class="dropdown bg-dark">
+              <li><a href="#" class="text-light">Announcement 1</a></li>
+              <li><a href="#" class="text-light">Announcement 2</a></li>
+              <li ><a href="#" class="text-light">Announcement 3</a></li>
+              <li ><a href="#" class="text-light">Announcement 4</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#team">Team</a></li>
+          <li><a href="#cta">Members</a></li>
+
+          <li><a href="">Rooms</a></li>
+          <li><a href="#portfolio">Tournaments</a></li>
+          
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
+      <!-- <img src="{% static 'assets/img/logo.png' %}" alt="XPD" style="width: 250px; height: 250px;"> -->
+      <h1>Welcome to XPD</h1>
+      <h2>X-GEN PAINLESS DRAGONS</h2>
+      <a href="#services" class="btn-get-started scrollto">Get Started</a>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+
+
+    <!-- ======= Clients Section ======= -->
+    <!-- <section id="clients" class="clients">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="row d-flex align-items-center">
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="{% static 'assets/img/clients/client-1.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="{% static 'assets/img/clients/client-2.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="{% static 'assets/img/clients/client-3.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="{% static 'assets/img/clients/client-4.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="{% static 'assets/img/clients/client-5.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="{% static 'assets/img/clients/client-6.png' %}" class="img-fluid" alt="">
+          </div>
+
+        </div>
+
+      </div>
+    </section> -->
+    <!-- End Clients Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <span>Announcements</span>
+          <h2>Announcements</h2>
+          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+        </div>
+
+        <div class="row">
+
+
+          <div class="card col-lg-4 col-md-6 d-flex align-items-stretch mt-4 bg-dark text-light p-0 announcement" data-aos="fade-up" data-aos-delay="750">
+            <div class="icon-box">
+            <img src="{% static 'assets/img/pubg-mobile-gameplay.jpg' %}" class="card-img-top p-0" alt="...">
+            <div class="card-body">
+              <h4 class="box-head text-light">Announcement</h4>
+              <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            </div>
+          </div>
+
+          <div class="card col-lg-4 col-md-6 d-flex align-items-stretch mt-4 bg-dark text-light p-0 announcement" data-aos="fade-up" data-aos-delay="750">
+            <div class="icon-box">
+            <img src="{% static 'assets/img/pubg-mobile-gameplay.jpg' %}" class="card-img-top p-0" alt="...">
+            <div class="card-body">
+              <h4 class="box-head text-light">Announcement</h4>
+              <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            </div>
+          </div>
+
+          <div class="card col-lg-4 col-md-6 d-flex align-items-stretch mt-4 bg-dark text-light p-0 announcement" data-aos="fade-up" data-aos-delay="750">
+            <div class="icon-box">
+            <img src="{% static 'assets/img/pubg-mobile-gameplay.jpg' %}" class="card-img-top p-0" alt="...">
+            <div class="card-body">
+              <h4 class="box-head text-light">Announcement</h4>
+              <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            </div>
+          </div>
+
+          <div class="card col-lg-4 col-md-6 d-flex align-items-stretch mt-4 bg-dark text-light p-0 announcement" data-aos="fade-up" data-aos-delay="750">
+            <div class="icon-box">
+            <img src="{% static 'assets/img/pubg-mobile-gameplay.jpg' %}" class="card-img-top p-0" alt="...">
+            <div class="card-body">
+              <h4 class="box-head text-light">Announcement</h4>
+              <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            </div>
+          </div>
+
+          <div class="card col-lg-4 col-md-6 d-flex align-items-stretch mt-4 bg-dark text-light p-0 announcement" data-aos="fade-up" data-aos-delay="750">
+            <div class="icon-box">
+            <img src="{% static 'assets/img/pubg-mobile-gameplay.jpg' %}" class="card-img-top p-0" alt="...">
+            <div class="card-body">
+              <h4 class="box-head text-light">Announcement</h4>
+              <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            </div>
+          </div>
+
+          <div class="card col-lg-4 col-md-6 d-flex align-items-stretch mt-4 bg-dark text-light p-0 announcement" data-aos="fade-up" data-aos-delay="750">
+            <div class="icon-box">
+            <img src="{% static 'assets/img/pubg-mobile-gameplay.jpg' %}" class="card-img-top p-0" alt="...">
+            <div class="card-body">
+              <h4 class="box-head text-light">Announcement</h4>
+              <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            </div>
+          </div>
+
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing bg-light text-dark">
+        <div class="container">
+  
+          <div class="section-title lineup">
+            <span>Lineups</span>
+            <h2>Lineups</h2>
+            <!-- <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p> -->
+          </div>
+  
+          <div class="row">
+  
+            <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="150">
+              <div class="box bg-dark text-light">
+                <h3 class='text-light'>Lineup 1</h3>
+                <h4 class="text-light">Lineup Name</h4>
+                <ul class="text-light">
+                  <li>Member 1</li>
+                  <li>Member 2</li>
+                  <li>Member 3</li>
+                  <li>Member 4</li>
+                  <li>Member 5</li>
+                </ul>
+                <div class="btn-wrap">
+                  <a href="#" class="btn-buy">Details</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="150">
+                <div class="box bg-dark text-light">
+                  <h3 class='text-light'>Lineup 2</h3>
+                  <h4 class="text-light">Lineup Name</h4>
+                  <ul class="text-light">
+                    <li>Member 1</li>
+                    <li>Member 2</li>
+                    <li>Member 3</li>
+                    <li>Member 4</li>
+                    <li>Member 5</li>
+                  </ul>
+                  <div class="btn-wrap">
+                    <a href="#" class="btn-buy">Details</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="150">
+                <div class="box bg-dark text-light">
+                  <h3 class='text-light'>Lineup 3</h3>
+                  <h4 class="text-light">Lineup Name</h4>
+                  <ul class="text-light">
+                    <li>Member 1</li>
+                    <li>Member 2</li>
+                    <li>Member 3</li>
+                    <li>Member 4</li>
+                    <li>Member 5</li>
+                  </ul>
+                  <div class="btn-wrap">
+                    <a href="#" class="btn-buy">Details</a>
+                  </div>
+                </div>
+              </div>
+  
+            
+  
+          </div>
+  
+        </div>
+      </section><!-- End Pricing Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+        <div class="container">
+  
+          <div class="section-title">
+            <span>Team</span>
+            <h2>Team</h2>
+            <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+          </div>
+  
+          <div class="row">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
+              <div class="member">
+                <img src="{% static 'assets/img/team/team-1.jpg' %}" alt="">
+                <h4>Walter White</h4>
+                <span>Chief Executive Officer</span>
+                <p>
+                  Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                </p>
+                <div class="social">
+                  <a href=""><i class="icofont-twitter"></i></a>
+                  <a href=""><i class="icofont-facebook"></i></a>
+                  <a href=""><i class="icofont-instagram"></i></a>
+                  <a href=""><i class="icofont-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
+              <div class="member">
+                <img src="{% static 'assets/img/team/team-2.jpg' %}" alt="">
+                <h4>Sarah Jhinson</h4>
+                <span>Product Manager</span>
+                <p>
+                  Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+                </p>
+                <div class="social">
+                  <a href=""><i class="icofont-twitter"></i></a>
+                  <a href=""><i class="icofont-facebook"></i></a>
+                  <a href=""><i class="icofont-instagram"></i></a>
+                  <a href=""><i class="icofont-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
+              <div class="member">
+                <img src="{% static 'assets/img/team/team-3.jpg' %}" alt="">
+                <h4>William Anderson</h4>
+                <span>CTO</span>
+                <p>
+                  Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+                </p>
+                <div class="social">
+                  <a href=""><i class="icofont-twitter"></i></a>
+                  <a href=""><i class="icofont-facebook"></i></a>
+                  <a href=""><i class="icofont-instagram"></i></a>
+                  <a href=""><i class="icofont-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Team Section -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="section-title">
+            <span>Members</span>
+            <h2>Members</h2>
+            <p>We are XPD</p>
+          </div>
+
+        <div class="text-center">
+            <div class="row d-flex align-items-center justify-content-center">
+
+                <div class="col-lg-2 col-md-4 col-6 person justify-content-center">
+                  <img src="{% static 'assets/img/clients/person.png' %}" class="img-fluid members" alt="">
+                  <h4>Name</h4>
+                  <h6>Lineup | Position</h6>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6 person">
+                    <img src="{% static 'assets/img/clients/person.png' %}" class="img-fluid members" alt="">
+                    <h4>Name</h4>
+                    <h6>Lineup | Position</h6>
+                  </div>
+                
+                  
+                  <div class="col-lg-2 col-md-4 col-6 person">
+                    <img src="{% static 'assets/img/clients/person.png' %}" class="img-fluid members" alt="">
+                    <h4>Name</h4>
+                    <h6>Lineup | Position</h6>
+                  </div>
+
+                  <div class="col-lg-2 col-md-4 col-6 person">
+                    <img src="{% static 'assets/img/clients/person.png' %}" class="img-fluid members" alt="">
+                    <h4>Name</h4>
+                    <h6>Lineup | Position</h6>
+                  </div>
+
+                  <div class="col-lg-2 col-md-4 col-6 person">
+                    <img src="{% static 'assets/img/clients/person.png' %}" class="img-fluid members" alt="">
+                    <h4>Name</h4>
+                    <h6>Lineup | Position</h6>
+                  </div>
+                
+                  
+                
+      
+              </div>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="section-title">
+          <span>Acheivements</span>
+          <h2>Acheivements</h2>
+          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="150">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 1</h4>
+              <p>App</p>
+              <a href="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="{% static 'assets/img/portfolio/portfolio-2.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <a href="{% static 'assets/img/portfolio/portfolio-2.jpg' %}" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="{% static 'assets/img/portfolio/portfolio-4.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Card 2</h4>
+              <p>Card</p>
+              <a href="{% static 'assets/img/portfolio/portfolio-4.jpg' %}" data-gall="portfolioGallery" class="venobox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    
+
+    
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <span>Contact</span>
+          <h2>Contact</h2>
+          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-6 col-md-6 box-contact">
+            <div class="info-box mb-4">
+              <i class="bx bxl-instagram"></i>
+              <h3 class='text-light'>Instagram</h3>
+              <p class='text-light'>xpd_esports</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-envelope"></i>
+              <h3 class='text-light'>Email Us</h3>
+              <p class='text-light'>contact@xpd.com</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row" data-aos="fade-up">
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>Day</h3>
+              <p>
+                A108 Adam Street <br>
+                NY 535022, USA<br><br>
+                <strong>Phone:</strong> +1 5589 55488 55<br>
+                <strong>Email:</strong> info@example.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Day</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/day-multipurpose-html-template-for-free/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+{% endblock %}
