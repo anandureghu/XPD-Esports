@@ -26,7 +26,7 @@ PROJECT_XPD_SECURITY_KEY = os.getenv('PROJECT_XPD_SECURITY_KEY')
 SECRET_KEY = PROJECT_XPD_SECURITY_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['xpdesports.herokuapp.com', '127.0.0.1']
 
