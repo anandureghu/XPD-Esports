@@ -29,7 +29,7 @@
   }
 
   .members{
-      background-color: whitesmoke;
+      /* background-color: whitesmoke; */
       clip-path: circle();
       margin: 20px 0px;
   }

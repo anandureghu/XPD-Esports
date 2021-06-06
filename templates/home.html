@@ -4,7 +4,7 @@
 
 
 {% block head %}
-<title>XPD-XGEN Painless Dragons</title>
+<title>XPD-ESPORTS</title>
 <link href="{% static 'assets/css/custom.css' %}" rel="stylesheet">
 {% endblock %}
 
@@ -16,7 +16,7 @@
         <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">contact@xpd.com</a>
       </div>
       <div class="social-links">
-        <a href="#" class="instagram"><i class="icofont-instagram"></i> Instagram</a>
+        <a href="https://www.instagram.com/xpd_esports_official/" class="instagram" target="_blank"><i class="icofont-instagram"></i> Instagram</a>
         <a href="#" class="twitter"><i class="icofont-youtube"></i> YouTube</a>
         <a href="#" class="facebook"><i class="icofont-facebook"></i> Facebook</a>
       </div>
@@ -27,30 +27,29 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
         <a href="#"><img src="{% static 'assets/img/logo.png' %}" alt="XPD" style="width: 50px; height: 50px;">
-      <h1 class="logo mr-auto">XPD</a></h1>
+      <h1 class="logo mr-auto">XPD Esports</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="home.html">Home</a></li>
-          <li class="drop-down"><a href="#services">Announcements</a>
+          <li class="active"><a href="{% url 'home' %}">Home</a></li>
+          <li class="drop-down"><a href="#announcements">Announcements</a>
             <ul class="dropdown bg-dark">
-              <li><a href="#" class="text-light">Announcement 1</a></li>
-              <li><a href="#" class="text-light">Announcement 2</a></li>
-              <li ><a href="#" class="text-light">Announcement 3</a></li>
-              <li ><a href="#" class="text-light">Announcement 4</a></li>
+              {% for announcement in announcements %}
+              <li><a href="#announcements" class="text-light">{{ announcement.title }}</a></li>
+              {% endfor %}
             </ul>
           </li>
-
+          <li><a href="#lineups">Lineups</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#cta">Members</a></li>
 
-          <li><a href="">Rooms</a></li>
-          <li><a href="#portfolio">Tournaments</a></li>
+          <!-- <li><a href="">Rooms</a></li>
+          <li><a href="#">Tournaments</a></li> -->
           
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#about">About</a></li>
+          <!-- <li><a href="#about">About</a></li> -->
 
         </ul>
       </nav><!-- .nav-menu -->
@@ -62,9 +61,9 @@
   <section id="hero" class="d-flex align-items-center">
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
       <!-- <img src="{% static 'assets/img/logo.png' %}" alt="XPD" style="width: 250px; height: 250px;"> -->
-      <h1>Welcome to XPD</h1>
+      <h1>Welcome to XPD ESports</h1>
       <h2>X-GEN PAINLESS DRAGONS</h2>
-      <a href="#services" class="btn-get-started scrollto">Get Started</a>
+      <a href="#announcements" class="btn-get-started scrollto">Get Started</a>
     </div>
   </section><!-- End Hero -->
 
@@ -109,84 +108,40 @@
     <!-- End Clients Section -->
 
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
+    <section id="announcements" class="services">
       <div class="container">
 
         <div class="section-title">
           <span>Announcements</span>
           <h2>Announcements</h2>
-          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
         </div>
 
         <div class="row">
 
+           {% for announcement in announcements %}
 
           <div class="card col-lg-4 col-md-6 d-flex align-items-stretch mt-4 bg-dark text-light p-0 announcement" data-aos="fade-up" data-aos-delay="750">
             <div class="icon-box">
-            <img src="{% static 'assets/img/pubg-mobile-gameplay.jpg' %}" class="card-img-top p-0" alt="...">
+              {% if announcement.image_link %}
+            <img src="{{ announcement.image_link }}" class="card-img-top p-0" alt="...">
+            {% else %}
+            <img src="{{ announcement.image.url }}" class="card-img-top p-0" alt="...">
+            {% endif %}
             <div class="card-body">
-              <h4 class="box-head text-light">Announcement</h4>
-              <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h4 class="box-head text-light">{{ announcement.title }}</h4>
+              <p>{{ announcement.description }}</p>
             </div>
             </div>
           </div>
 
-          <div class="card col-lg-4 col-md-6 d-flex align-items-stretch mt-4 bg-dark text-light p-0 announcement" data-aos="fade-up" data-aos-delay="750">
-            <div class="icon-box">
-            <img src="{% static 'assets/img/pubg-mobile-gameplay.jpg' %}" class="card-img-top p-0" alt="...">
-            <div class="card-body">
-              <h4 class="box-head text-light">Announcement</h4>
-              <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            </div>
-          </div>
-
-          <div class="card col-lg-4 col-md-6 d-flex align-items-stretch mt-4 bg-dark text-light p-0 announcement" data-aos="fade-up" data-aos-delay="750">
-            <div class="icon-box">
-            <img src="{% static 'assets/img/pubg-mobile-gameplay.jpg' %}" class="card-img-top p-0" alt="...">
-            <div class="card-body">
-              <h4 class="box-head text-light">Announcement</h4>
-              <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            </div>
-          </div>
-
-          <div class="card col-lg-4 col-md-6 d-flex align-items-stretch mt-4 bg-dark text-light p-0 announcement" data-aos="fade-up" data-aos-delay="750">
-            <div class="icon-box">
-            <img src="{% static 'assets/img/pubg-mobile-gameplay.jpg' %}" class="card-img-top p-0" alt="...">
-            <div class="card-body">
-              <h4 class="box-head text-light">Announcement</h4>
-              <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            </div>
-          </div>
-
-          <div class="card col-lg-4 col-md-6 d-flex align-items-stretch mt-4 bg-dark text-light p-0 announcement" data-aos="fade-up" data-aos-delay="750">
-            <div class="icon-box">
-            <img src="{% static 'assets/img/pubg-mobile-gameplay.jpg' %}" class="card-img-top p-0" alt="...">
-            <div class="card-body">
-              <h4 class="box-head text-light">Announcement</h4>
-              <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            </div>
-          </div>
-
-          <div class="card col-lg-4 col-md-6 d-flex align-items-stretch mt-4 bg-dark text-light p-0 announcement" data-aos="fade-up" data-aos-delay="750">
-            <div class="icon-box">
-            <img src="{% static 'assets/img/pubg-mobile-gameplay.jpg' %}" class="card-img-top p-0" alt="...">
-            <div class="card-body">
-              <h4 class="box-head text-light">Announcement</h4>
-              <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            </div>
-          </div>
+          {% endfor %}
 
 
       </div>
     </section><!-- End Services Section -->
 
     <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing bg-light text-dark">
+    <section id="lineups" class="pricing bg-light text-dark">
         <div class="container">
   
           <div class="section-title lineup">
@@ -195,60 +150,30 @@
             <!-- <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p> -->
           </div>
   
-          <div class="row">
+          <div class="row justify-content-center">
   
-            <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="150">
+            {% for lineup in lineups %}
+            {% if lineup.visible %}
+            <div class="col-lg-4 col-md-6 my-2" data-aos="zoom-in" data-aos-delay="150">
+              
               <div class="box bg-dark text-light">
-                <h3 class='text-light'>Lineup 1</h3>
-                <h4 class="text-light">Lineup Name</h4>
+                <h3 class='text-light'>{{ lineup.title }}</h3>
+                <h4 class="text-light">{{ lineup.title }}</h4>
                 <ul class="text-light">
-                  <li>Member 1</li>
-                  <li>Member 2</li>
-                  <li>Member 3</li>
-                  <li>Member 4</li>
-                  <li>Member 5</li>
+                  {% for member in members %}
+                    {% if member.lineup.title == lineup.title %}
+                    <li>{{ member.in_game_name }}</li>
+                    {% endif %}
+                  {% endfor %}
                 </ul>
                 <div class="btn-wrap">
                   <a href="#" class="btn-buy">Details</a>
                 </div>
               </div>
+              
             </div>
-
-            <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="150">
-                <div class="box bg-dark text-light">
-                  <h3 class='text-light'>Lineup 2</h3>
-                  <h4 class="text-light">Lineup Name</h4>
-                  <ul class="text-light">
-                    <li>Member 1</li>
-                    <li>Member 2</li>
-                    <li>Member 3</li>
-                    <li>Member 4</li>
-                    <li>Member 5</li>
-                  </ul>
-                  <div class="btn-wrap">
-                    <a href="#" class="btn-buy">Details</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="150">
-                <div class="box bg-dark text-light">
-                  <h3 class='text-light'>Lineup 3</h3>
-                  <h4 class="text-light">Lineup Name</h4>
-                  <ul class="text-light">
-                    <li>Member 1</li>
-                    <li>Member 2</li>
-                    <li>Member 3</li>
-                    <li>Member 4</li>
-                    <li>Member 5</li>
-                  </ul>
-                  <div class="btn-wrap">
-                    <a href="#" class="btn-buy">Details</a>
-                  </div>
-                </div>
-              </div>
-  
-            
+            {% endif %}
+            {% endfor %}
   
           </div>
   
@@ -262,60 +187,29 @@
           <div class="section-title">
             <span>Team</span>
             <h2>Team</h2>
-            <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+            <p>“Talent wins games, but teamwork and intelligence win championships.”</p>
           </div>
   
-          <div class="row">
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
+          <div class="row justify-content-center">
+
+            {% for member in members %}
+            {% if member.position_in_clan %}
+            <div class="col-lg-3 col-md-4 d-flex align-items-stretch" data-aos="zoom-in" style="max-width: 300px;">
               <div class="member">
-                <img src="{% static 'assets/img/team/team-1.jpg' %}" alt="">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-                <p>
-                  Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
-                </p>
+                <img src="{{ member.image.url }}" alt="{{ member.name }}"/>
+                <h4 style="color: #22303C;">{{ member.in_game_name }}</h4>
+                <span style="color: #3A3B3C;">{{ member.lineup }}</span>
+                <p>{{ member.position_in_clan }}{% if member.managing_position %} / {{ member.managing_position }}{% endif %} / {{ member.role }}</p>
                 <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
                   <a href=""><i class="icofont-facebook"></i></a>
                   <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
+                  <a href=""><i class="icofont-youtube"></i></a>
                 </div>
               </div>
             </div>
-  
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
-              <div class="member">
-                <img src="{% static 'assets/img/team/team-2.jpg' %}" alt="">
-                <h4>Sarah Jhinson</h4>
-                <span>Product Manager</span>
-                <p>
-                  Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
-                </p>
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
-              <div class="member">
-                <img src="{% static 'assets/img/team/team-3.jpg' %}" alt="">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-                <p>
-                  Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
-                </p>
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
+            {% endif %}
+            {% endfor %}
+            
   
           </div>
   
@@ -335,40 +229,20 @@
         <div class="text-center">
             <div class="row d-flex align-items-center justify-content-center">
 
+              {% for member in members %}
+              {% if not member.position_in_clan %}
                 <div class="col-lg-2 col-md-4 col-6 person justify-content-center">
-                  <img src="{% static 'assets/img/clients/person.png' %}" class="img-fluid members" alt="">
-                  <h4>Name</h4>
-                  <h6>Lineup | Position</h6>
+                  <img src="{{ member.image.url }}" class="img-fluid members" alt="" style="width: 150px; height: 150px;">
+                  <h4>{{ member.in_game_name }}</h4>
+                  {% if member.second_role %}
+                    <h6>{{ member.lineup }} | {{ member.role }}/{{ member.second_role }}</h6>
+                  {% else %}
+                    <h6>{{ member.lineup }} | {{ member.role }}</h6>
+                  {% endif %}
                 </div>
+                {% endif %}
+                {% endfor %}
 
-                <div class="col-lg-2 col-md-4 col-6 person">
-                    <img src="{% static 'assets/img/clients/person.png' %}" class="img-fluid members" alt="">
-                    <h4>Name</h4>
-                    <h6>Lineup | Position</h6>
-                  </div>
-                
-                  
-                  <div class="col-lg-2 col-md-4 col-6 person">
-                    <img src="{% static 'assets/img/clients/person.png' %}" class="img-fluid members" alt="">
-                    <h4>Name</h4>
-                    <h6>Lineup | Position</h6>
-                  </div>
-
-                  <div class="col-lg-2 col-md-4 col-6 person">
-                    <img src="{% static 'assets/img/clients/person.png' %}" class="img-fluid members" alt="">
-                    <h4>Name</h4>
-                    <h6>Lineup | Position</h6>
-                  </div>
-
-                  <div class="col-lg-2 col-md-4 col-6 person">
-                    <img src="{% static 'assets/img/clients/person.png' %}" class="img-fluid members" alt="">
-                    <h4>Name</h4>
-                    <h6>Lineup | Position</h6>
-                  </div>
-                
-                  
-                
-      
               </div>
         </div>
 
@@ -376,7 +250,7 @@
     </section><!-- End Cta Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
+    <!-- <section id="portfolio" class="portfolio">
       <div class="container">
 
         <div class="section-title">
@@ -433,7 +307,8 @@
         </div>
 
       </div>
-    </section><!-- End Portfolio Section -->
+    </section> -->
+    <!-- End Portfolio Section -->
 
     
 
@@ -449,14 +324,19 @@
           <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
         </div>
 
+
         <div class="row" data-aos="fade-up">
+          
           <div class="col-lg-6 col-md-6 box-contact">
+            <a href="https://www.instagram.com/xpd_esports_official/" target="_blank">
             <div class="info-box mb-4">
               <i class="bx bxl-instagram"></i>
               <h3 class='text-light'>Instagram</h3>
               <p class='text-light'>xpd_esports</p>
             </div>
+          </a>
           </div>
+          
 
           <div class="col-lg-6 col-md-6">
             <div class="info-box  mb-4">
@@ -468,7 +348,7 @@
 
         </div>
 
-        <div class="row" data-aos="fade-up">
+        <div class="row justify-content-center" data-aos="fade-up">
 
           <div class="col-lg-6">
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
@@ -507,78 +387,7 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
 
-          <div class="col-lg-4 col-md-6">
-            <div class="footer-info">
-              <h3>Day</h3>
-              <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
-              </p>
-              <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Day</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/day-multipurpose-html-template-for-free/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
   <div id="preloader"></div>
